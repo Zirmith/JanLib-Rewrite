@@ -14,13 +14,15 @@ if getgenv().library then
 end
 
 
-function library:setTitle(title)
-    getgenv().libTitle = title
-end
 
 
 local library = {design = getgenv().design == "kali" and "kali" or "uwuware", tabs = {}, draggable = true, flags = {}, title = getgenv().libTitle , open = false, popup = nil, instances = {}, connections = {}, options = {}, notifications = {}, tabSize = 0, theme = {}, foldername = "cheatx_cnfgs", fileext = ".txt"}
 getgenv().library = library
+
+
+function library:setTitle(title)
+    getgenv().libTitle = title
+end
 
 --Locals
 local dragging, dragInput, dragStart, startPos, dragObject
